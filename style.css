@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(211, 211, 211, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: min(500px, 300px);
+    height: min(500px, 300px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.btn{
+    background-color: white;
+    border: none;
+    transition: transform 0.5s, background-color 0.5s, fill 0.5s;
+}
+
+.btn.fb{
+    border-radius: 10px;
+    border-top-left-radius: 100%;
+    box-shadow: 5px 5px 10px 2px rgb(128, 128, 128, 0.5);
+}
+.btn.ig{
+    border-radius: 10px;
+    border-top-right-radius: 100%;
+    box-shadow: -5px 5px 10px 2px rgb(128, 128, 128, 0.5);
+}
+.btn.git{
+    border-radius: 10px;
+    border-bottom-left-radius: 100%;
+    box-shadow: 5px -5px 10px 2px rgb(128, 128, 128, 0.5);
+}
+.btn.twt{
+    border-radius: 10px;
+    border-bottom-right-radius: 100%;
+    box-shadow: -5px -5px 10px 2px rgb(128, 128, 128, 0.5);
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+svg{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.btn.fb svg{
+    fill: blue;
+    /* transform: translateY(20px) translateX(20px); */
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: -1.5rem;
+}
+.btn.ig svg{
+    fill: palevioletred;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: -1.5rem;
+}
+.btn.git svg{
+    fill: black;
+    margin-left: 3rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+.btn.twt svg{
+    fill: rgb(107, 198, 228);
+    margin-right: 3rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn.fb:hover{
+    background-color: blue;
+}
+.btn.fb:hover svg{
+    fill: white;
+}
+
+.btn.ig:hover{
+    background-color: palevioletred;
+}
+.btn.ig:hover svg{
+    fill: white;
+}
+
+.btn.git:hover{
+    background-color: black;
+}
+.btn.git:hover svg{
+    fill: white;
+}
+
+.btn.twt:hover{
+    background-color: rgb(107, 198, 228);
+}
+.btn.twt:hover svg{
+    fill: white;
+}
+
+.btn:hover svg{
+    animation: rotate_ 0.5s linear;
+}
+
+@keyframes rotate_ {
+    0%{
+        transform: scale(1.5) rotate(0deg);
+    }
+    100%{
+        transform: scale(1) rotate(360deg);
+    }
+}
